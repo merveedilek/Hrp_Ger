@@ -1,0 +1,994 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECB73D8D-6EA3-4B04-9C7D-37C93E10068D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hrp_Ger</RootNamespace>
+    <AssemblyName>Hrp_Ger</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44380</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\ajax-loader.gif" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap-datepicker.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="Content\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="Content\css\css\bootstrap-reboot.css" />
+    <Content Include="Content\css\css\dropdown.css" />
+    <Content Include="Content\css\css\mixins\_text-hide.css" />
+    <Content Include="Content\css\flaticon.css" />
+    <Content Include="Content\css\jquery.timepicker.css" />
+    <Content Include="Content\css\magnific-popup.css" />
+    <Content Include="Content\css\owl.carousel.min.css" />
+    <Content Include="Content\css\owl.theme.default.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\flaticon\backup.txt" />
+    <Content Include="Content\fonts\flaticon\font\flaticon.css" />
+    <Content Include="Content\fonts\flaticon\font\flaticon.html" />
+    <Content Include="Content\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="Content\HRP\05-Kontakt-banner.jpg" />
+    <Content Include="Content\HRP\10597651_1.png" />
+    <Content Include="Content\HRP\500_F_212910354_puslNekd7P6PJM3fDimnnWQ9hPCjtBZZ.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-001\ayna-001-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-001\ayna-001-Model-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-001\ayna-001.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-002\ayna-002-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-002\ayna-002-Model-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-002\ayna-002.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-003\ayna-003-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-003\ayna-003-Model-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-003\ayna-003.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-004\ayna-004-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-004\ayna-004-Model-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-004\ayna-004.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-005\ayna-005-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-005\ayna-005-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-005\ayna-005.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-006\ayna-006-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-006\ayna-006-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\agm-006\ayna-006.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\dt-004\dus-oturagi-003-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\dt-004\dus-oturagi-004-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\etb-001\etb-engelli-tutunma-bari-001-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\etb-001\etb-engelli-tutunma-bari-001-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\etb-002-2\etb-engelli-tutunma-bari-002-2-r-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\etb-002-2\etb-engelli-tutunma-bari-002-2-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\etb-002\etb-engelli-tutunma-bari-002-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\etb-002\etb-engelli-tutunma-bari-002-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\etb-003\etb-engelli-tutunma-bari-003-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\etb-003\etb-engelli-tutunma-bari-003-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-001\havluluk-001-1-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-001\havluluk-001-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-001\havluluk1-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-002-2\havluluk-002-2-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-002-2\havluluk-002-2-r-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-002-2\havluluk-002-2-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-002\havlulu-002-1-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-002\havluluk-002-r-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-002\havluluk-002-ölçüleri-1-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-003\havluluk-003-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-003\havluluk-003-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-003\havluluk3-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-004\havluluk-004-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-004\havluluk-004-r-1-600x600.jpg" />
+    <Content Include="Content\HRP\Aksesuarlar\twl-004\havluluk-004-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\anaresimler\1-min.jpg" />
+    <Content Include="Content\HRP\anaresimler\Adsız.jpg" />
+    <Content Include="Content\HRP\anaresimler\aksesuarlar.jpg" />
+    <Content Include="Content\HRP\anaresimler\aksesuarlar1.jpg" />
+    <Content Include="Content\HRP\anaresimler\au-001-r.jpg" />
+    <Content Include="Content\HRP\anaresimler\aydınlatmaUrunler.jpg" />
+    <Content Include="Content\HRP\anaresimler\ayna-002-r.jpg" />
+    <Content Include="Content\HRP\anaresimler\bahce.jpg" />
+    <Content Include="Content\HRP\anaresimler\bahceMobilyalari.jpg" />
+    <Content Include="Content\HRP\anaresimler\bahceMobilyalari2.jpg" />
+    <Content Include="Content\HRP\anaresimler\bm-ob-01-r-min.jpg" />
+    <Content Include="Content\HRP\anaresimler\bm-ob-01-r.jpg" />
+    <Content Include="Content\HRP\anaresimler\hrp.png" />
+    <Content Include="Content\HRP\anaresimler\icMekanMobilya.jpg" />
+    <Content Include="Content\HRP\anaresimler\icMekanMobilya2.jpg" />
+    <Content Include="Content\HRP\anaresimler\icmekann.jpg" />
+    <Content Include="Content\HRP\anaresimler\kentmobilya.jpg" />
+    <Content Include="Content\HRP\anaresimler\tamamlayici-urunler-kapak-gorseli.jpg" />
+    <Content Include="Content\HRP\anaresimler\tamamlayiciurun.jpg" />
+    <Content Include="Content\HRP\anaresimler\tamamlayiciurun1.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-001\au-001-2satine-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-001\au-001-3satine-2-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-001\au-001-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-001\au-001-Model-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-001\au-001satine.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-002\au-002-2satine-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-002\au-002-3satine-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-002\au-002-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-002\au-002-Model-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-002\au-002satine.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-003\au-003-1satine.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-003\au-003-2satine.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-003\au-003-3satine.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-003\au-003-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-003\au-003-Model.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-001\au-d-001-1-satine-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-001\au-d-001-3satine-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-001\au-d-001-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-001\au-d-001-Model-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-001\au-d-001-satine.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-002\au-d-002-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-002\au-d-002-satine.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-002\au-d-002-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-003\au-d-003-1satine-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-003\au-d-003-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-003\au-d-003-Model-600x600.jpg" />
+    <Content Include="Content\HRP\Aydınlatma\au-d-003\au-d-003satine.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-001\bm-ms-001-3satine-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-001\bm-ms-001-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-001\bm-ms-001-satine.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-001\bm-ms-001-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-002\bm-ms-002-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-002\bm-ms-002-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-002\bm-ms-002-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-002\bm-ms-002.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-003\bm-ms-003-2-1-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-003\bm-ms-003-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-003\bm-ms-003-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-003\bm-ms-003.r-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-004\bm-ms-004-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-004\bm-ms-004-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-004\bm-ms-004-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-004\bm-ms-004.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-005\bm-ms-005-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-005\bm-ms-005-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-005\bm-ms-005-Model-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-005\bm-ms-005.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-006\bm-ms-006-2-üstü-satine-ayaklar-parlak-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-006\bm-ms-006-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-006\bm-ms-006-Model-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ms-006\bm-ms-006-üstü-satine-ayaklar-parlak.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-01\bm-ob-01-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-01\bm-ob-01-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-01\bm-ob-01-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-01\bm-ob-01-ölçüleri-1-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-01\bm-ob-01.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-02\bm-ob-02-1-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-02\bm-ob-02-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-02\bm-ob-02-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-02\bm-ob-02-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-02\bm-ob-02.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-03\bm-ob-03-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-03\bm-ob-03-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-03\bm-ob-03-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-03\bm-ob-03-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-03\bm-ob-03.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-04\bm-ob-04-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-04\bm-ob-04-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-04\bm-ob-04-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-04\bm-ob-04-Model-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-04\bm-ob-04.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-05\bm-ob-05-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-05\bm-ob-05-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-05\bm-ob-05-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-05\bm-ob-05-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-05\bm-ob-05.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-06\bm-ob-06-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-06\bm-ob-06-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-06\bm-ob-06-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-06\bm-ob-06-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-06\bm-ob-06.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-07\bm-ob-07-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-07\bm-ob-07-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-07\bm-ob-07-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-07\bm-ob-07-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-07\bm-ob-07.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08-9-10\bm-ob-08-9-10-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08-9-10\bm-ob-08-9-10-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08-9-10\bm-ob-08-9-10-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08-9-10\bm-ob-08-9-10-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08-9-10\bm-ob-08-9-10.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08\bm-ob-08-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08\bm-ob-08-2-ölçüleri-3lü-sol-tek-kollu-1-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08\bm-ob-08-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08\bm-ob-08-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08\bm-ob-08-r-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-08\bm-ob-08-ölçüleri-sol-tek-kollu-1-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-09\bm-ob-09-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-09\bm-ob-09-2-ölçüleri-3lü-sağ-tek-kollu-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-09\bm-ob-09-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-09\bm-ob-09-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-09\bm-ob-09-r-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-09\bm-ob-09-ölçüleri-sağ-tek-kollu-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-10\bm-ob-10-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-10\bm-ob-10-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-10\bm-ob-10-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-10\bm-ob-10-r-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-10\bm-ob-10-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-11\bm-ob-11-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-11\bm-ob-11-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-11\bm-ob-11-r-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-11\bm-ob-11-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-11\bm-ob-11.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-12\bm-ob-12-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-12\bm-ob-12-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-12\bm-ob-12-r-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-12\bm-ob-12-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-12\bm-ob-12.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-13\bm-ob-13-1-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-13\bm-ob-13-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-13\bm-ob-13-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-13\bm-ob-13-Model-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-13\bm-ob-13.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-14\bm-ob-14-1-satine.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-14\bm-ob-14-2-satine-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-14\bm-ob-14-3-satine-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-14\bm-ob-14-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-14\bm-ob-14-Model-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-15\bm-ob-15-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-15\bm-ob-15-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-15\bm-ob-15-4-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-15\bm-ob-15-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-15\bm-ob-15-Model-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-ob-15\bm-ob-15.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-pergole-001\bm-pergole-001-1-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-pergole-001\bm-pergole-001-3-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-pergole-001\bm-pergole-001-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-pergole-001\bm-pergole-001-r-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-pergole-001\bm-pergole-001-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-salincak-002\bm-salincak-002-1-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-salincak-002\bm-salincak-002-2-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-salincak-002\bm-salincak-002-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-salincak-002\bm-salincak-002-r-600x600.jpg" />
+    <Content Include="Content\HRP\bahcemobilyaları\bm-salincak-002\bm-salincak-002-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\bize-ulasin-banner.jpg" />
+    <Content Include="Content\HRP\Galeri\3-1_1.jpg" />
+    <Content Include="Content\HRP\Galeri\4_1.jpg" />
+    <Content Include="Content\HRP\Galeri\awee_1.jpg" />
+    <Content Include="Content\HRP\Galeri\aydinlatma-urunleri-652x554-1.jpg" />
+    <Content Include="Content\HRP\Galeri\bahce-mobilyalari-1-652x811-1.jpg" />
+    <Content Include="Content\HRP\Galeri\banyo-urunleri_1-652x714-1.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\3-1_1kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\4_1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\awee_1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\banyo-urunleri_1-652x714-1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\pergole-04_1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\pergole-05_1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\pergole-06_1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\sahne1_1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\sahne2_1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\sahne2_1080_1080_1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\sahne3_1 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010765 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010782 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010798 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010811 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010817 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010826 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010832 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010838 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010854 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010858 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010904 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010908 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010909 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010918 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010920 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010925 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010935 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010937 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010942 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010944 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010952 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010953 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010956 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010961 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010963 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010974 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010981 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010985 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010985kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010991 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010991kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010997 kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\XT2_I_010997kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\düzenlenen\yeni.jpg" />
+    <Content Include="Content\HRP\Galeri\ic-mekan-urunleri-652x710-1.jpg" />
+    <Content Include="Content\HRP\Galeri\kent-mobilyalari-652x554-1.jpg" />
+    <Content Include="Content\HRP\Galeri\pergole-04_1.jpg" />
+    <Content Include="Content\HRP\Galeri\pergole-05_1.jpg" />
+    <Content Include="Content\HRP\Galeri\pergole-06_1.jpg" />
+    <Content Include="Content\HRP\Galeri\sahne1_1.jpg" />
+    <Content Include="Content\HRP\Galeri\sahne2_1.jpg" />
+    <Content Include="Content\HRP\Galeri\sahne2_1080_1080_1.jpg" />
+    <Content Include="Content\HRP\Galeri\sahne3_1.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010765.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010782.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010798.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010811.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010817.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010826.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010832.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010838.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010854.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010858.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010904.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010908.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010909.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010918.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010920.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010925.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010935.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010937.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010942.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010944.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010952.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010953.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010956.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010961.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010963.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010974.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010981.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010981kopya.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010985.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010991.jpg" />
+    <Content Include="Content\HRP\Galeri\XT2_I_010997.jpg" />
+    <Content Include="Content\HRP\hrp-logo.png" />
+    <Content Include="Content\HRP\hrplogo.png" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2-k\imm-k-001-2-k-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2-k\imm-k-001-2-k-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2-k\imm-k-001-2-k-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2-k\imm-k-001-2-k-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2-k\imm-k-001-2-k-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2\imm-k-001-2-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2\imm-k-001-2-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2\imm-k-001-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2\imm-k-001-2-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-2\imm-k-001-2-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-k\imm-k-001-k-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-k\imm-k-001-k-2-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-k\imm-k-001-k-3-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-k\imm-k-001-k-r-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001-k\imm-k-001-k-ölçüleri-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001\imm-k-001-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001\imm-k-001-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001\imm-k-001-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001\imm-k-001-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-001\imm-k-001.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2-k\imm-k-002-2-k-2-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2-k\imm-k-002-2-k-3-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2-k\imm-k-002-2-k-4-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2-k\imm-k-002-2-k-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2-k\imm-k-002-2-k-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2\imm-k-002-2-2-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2\imm-k-002-2-3-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2\imm-k-002-2-5-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2\imm-k-002-2-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-2\imm-k-002-2-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-k\imm-k-002-2-k-2-3-600x600.png" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-k\imm-k-002-2-k-3-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-k\imm-k-002-2-k-5-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-k\imm-k-002-2-k-r-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002-k\imm-k-002-k-ölçüleri-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002\imm-k-002-2-4-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002\imm-k-002-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002\imm-k-002-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002\imm-k-002-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-002\imm-k-002-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2-k\imm-k-003-2-k-2-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2-k\imm-k-003-2-k-3-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2-k\imm-k-003-2-k-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2-k\imm-k-003-2-k-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2-k\imm-k-003-2-k-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2\imm-k-003-2-2-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2\imm-k-003-2-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2\imm-k-003-2-4-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2\imm-k-003-2-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-2\imm-k-003-2-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-k\imm-k-003-6raflı-1080-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-k\imm-k-003-k-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-k\imm-k-003-k-2-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-k\imm-k-003-k-3-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003-k\imm-k-003-k-ölçüleri-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003\imm-k-003-1-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003\imm-k-003-2-1-600x600.png" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003\imm-k-003-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003\imm-k-003-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-003\imm-k-003-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004-2\imm-k-004-2-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004-2\imm-k-004-2-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004-2\imm-k-004-2-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004-2\imm-k-004-2-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004-2\imm-k-004-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004\imm-k-004-2-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004\imm-k-004-3-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004\imm-k-004-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004\imm-k-004-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-004\mm-k-004-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-005\imm-k-005-2-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-005\imm-k-005-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-005\imm-k-005-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-005\imm-k-005-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-k-005\imm-k-005-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-001\imm-masa-001-1-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-001\imm-masa-001-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-001\imm-masa-001-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-001\imm-masa-001-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-001\imm-masa-001.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-002\imm-masa-002-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-002\imm-masa-002-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-002\imm-masa-002-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-002\imm-masa-002.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-003\imm-masa-003-1-satine-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-003\imm-masa-003-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-003\imm-masa-003-satine.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-003\imm-masa-003-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-004\imm-masa-004-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-004\imm-masa-004-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-004\imm-masa-004-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-004\imm-masa-004.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-005\imm-masa-005-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-005\imm-masa-005-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-005\imm-masa-005-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-005\imm-masa-005.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-006\imm-masa-006-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-006\imm-masa-006-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-006\imm-masa-006-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-masa-006\imm-masa-006.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-01\imm-ob-01-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-01\imm-ob-01-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-01\imm-ob-01-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-01\imm-ob-01-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-01\imm-ob-01.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-02\imm-ob-02-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-02\imm-ob-02-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-02\imm-ob-02-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-02\imm-ob-02-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-02\imm-ob-02.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-03-04-05\imm-ob-03-4-5-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-03-04-05\imm-ob-03-4-5-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-03-04-05\imm-ob-03-4-5-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-03-04-05\imm-ob-03-4-5.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-03\imm-ob-03-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-03\imm-ob-03-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-03\imm-ob-03-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-03\imm-ob-03-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-03\imm-ob-03-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-04\imm-ob-04-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-04\imm-ob-04-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-04\imm-ob-04-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-04\imm-ob-04-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-04\imm-ob-04-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-05\imm-ob-05-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-05\imm-ob-05-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-05\imm-ob-05-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-05\imm-ob-05-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-06\imm-ob-06-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-06\imm-ob-06-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-06\imm-ob-06-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-06\imm-ob-06-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-06\imm-ob-06-ölçüleri-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-07\imm-ob-07-1güncel-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-07\imm-ob-07-3-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-07\imm-ob-07-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-07\imm-ob-07-güncel-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-07\imm-ob-07-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-08\imm-ob-08-1-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-08\imm-ob-08-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-08\imm-ob-08-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-08\imm-ob-08-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-08\imm-ob-08-ÖLÇÜLERİ-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-09\imm-ob-09-1-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-09\imm-ob-09-1-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-09\imm-ob-09-2-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-09\imm-ob-09-r-600x600.jpg" />
+    <Content Include="Content\HRP\IcmekanMobilya\imm-ob-09\imm-ob-09-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-001-3\km-ck-001-3-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-001-3\km-ck-001-3-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-001\km-ck-001-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-001\km-ck-001-r-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-001\km-ck-001-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-002\km-ck-002-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-002\km-ck-002-r-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-002\km-ck-002-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-003\km-ck-003-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-003\km-ck-003-r-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ck-003\km-ck-003-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001-2\km-d-001-2-1-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001-2\km-d-001-2-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001-2\km-d-001-2-2-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001-2\km-d-001-Model2-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001-3\km-d-001-3-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001-3\km-d-001-3-2-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001-3\km-d-001-Model-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001\km-d-001-2-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001\km-d-001-5-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001\km-d-001-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-001\km-d-001-Model3-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-002-02\km-d-002-02-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-002-02\km-d-002-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-002-02\km-d-002-Model2-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-002-03\km-d-002-03-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-002-03\km-d-002-Model3-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-002-03\km-d-004-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-002\km-d-001-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-002\km-d-002-2-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-002\km-d-002-Model-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-003\km-d-001-4-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-003\km-d-002-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-003\km-d-003-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-d-003\km-d-003-Model-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-001\km-ob-001-1-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-001\km-ob-001-2-2-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-001\km-ob-001-3-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-001\km-ob-001-r-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-001\km-ob-001-ölçüleri-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-002\km-ob-002-2-2-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-002\km-ob-002-3-1-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-002\km-ob-002-5-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-002\km-ob-002-r-600x600.jpg" />
+    <Content Include="Content\HRP\KentMobilyalari\km-ob-002\km-ob-002-ölçüleri-600x600.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\Ahsaptipisecenekleri\AbanozKahve - Kopya %282%29.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\Ahsaptipisecenekleri\AbanozKahve - Kopya.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\Ahsaptipisecenekleri\AbanozKahve.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\Ahsaptipisecenekleri\KalinDamarMese.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\Ahsaptipisecenekleri\MeseExtra.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\Ahsaptipisecenekleri\pelenksHareli.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\Ahsaptipisecenekleri\platinium.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\Ahsaptipisecenekleri\TeakHareli.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\DeriDosemeSecenekleri\NONAFR610.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\DeriDosemeSecenekleri\Retro1231.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\DeriDosemeSecenekleri\Retro1301.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\DeriDosemeSecenekleri\RETRO1316.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\DeriDosemeSecenekleri\retro1521.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\DeriDosemeSecenekleri\RETRO1901.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\DeriDosemeSecenekleri\SantaGlory275.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\DeriDosemeSecenekleri\SantaGlory480.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\DeriDosemeSecenekleri\SantaGlory525.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\KumasSecenekleri\ATHENA1131.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\KumasSecenekleri\ATHENA1164.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\KumasSecenekleri\ATHENA1210.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\KumasSecenekleri\ATHENA174.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\KumasSecenekleri\PALMİRA1100.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\KumasSecenekleri\PALMİRA159.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\KumasSecenekleri\SummerPlaın042.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\KumasSecenekleri\SummerPlaın220.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\KumasSecenekleri\SummerPlaın540.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\blackparlak - Kopya.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\blackparlak - Kopya1.png" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\blackparlak.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\blackparlak1.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\blacksatine.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\bronzparlak.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\bronzsatine.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\goldparlak.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\goldsatine.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\naturparlak.jpg" />
+    <Content Include="Content\HRP\tamamlayiciurun\MetalRenkSecenekleri\natursatine.jpg" />
+    <Content Include="Content\HRP\unnamed.jpg" />
+    <Content Include="Content\images\Adsız1.png" />
+    <Content Include="Content\images\analiz.jpg" />
+    <Content Include="Content\images\back.png" />
+    <Content Include="Content\images\banner.jpg" />
+    <Content Include="Content\images\belge1.jpg" />
+    <Content Include="Content\images\belge2.jpg" />
+    <Content Include="Content\images\belge3.jpg" />
+    <Content Include="Content\images\belge4.jpg" />
+    <Content Include="Content\images\belge5.jpg" />
+    <Content Include="Content\images\belge6.jpg" />
+    <Content Include="Content\images\belge7.jpg" />
+    <Content Include="Content\HRP\blue-snow.png" />
+    <Content Include="Content\images\f1.jpg" />
+    <Content Include="Content\images\f2.jpg" />
+    <Content Include="Content\images\favicon.png" />
+    <Content Include="Content\images\flashplayer32pp_fa_install.exe" />
+    <Content Include="Content\images\galeri.jpg" />
+    <Content Include="Content\images\gallery\galeri%281%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%2810%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%2811%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%2812%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%2813%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%2814%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%2815%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%2816%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%2817%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%2818%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%282%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%283%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%284%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%285%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%286%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%287%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%288%29.jpg" />
+    <Content Include="Content\images\gallery\galeri%289%29.jpg" />
+    <Content Include="Content\images\hakkimizda.jpg" />
+    <Content Include="Content\images\hakkimizda.png" />
+    <Content Include="Content\images\home_makina_parkuru.jpg" />
+    <Content Include="Content\images\home_metodoloji.jpg" />
+    <Content Include="Content\images\home_open_house.jpg" />
+    <Content Include="Content\images\iletisim.jpg" />
+    <Content Include="Content\images\kalite.jpg" />
+    <Content Include="Content\images\kalitee.jpg" />
+    <Content Include="Content\images\kurucu.jpg" />
+    <Content Include="Content\images\loc.png" />
+    <Content Include="Content\images\misyon.png" />
+    <Content Include="Content\images\mv1200.jpg" />
+    <Content Include="Content\images\onay.jpg" />
+    <Content Include="Content\images\search_icon.png" />
+    <Content Include="Content\images\slider_one.jpg" />
+    <Content Include="Content\images\teslimat.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%281%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2810%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2811%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2812%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2813%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2814%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2815%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2816%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2817%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2818%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2819%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%282%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2820%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2821%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2822%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2823%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2824%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2825%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2826%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2827%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2828%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2829%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%283%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2830%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2831%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2832%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2833%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2834%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2835%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2836%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2837%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2838%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2839%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%284%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2840%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2841%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2842%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2843%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2844%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2845%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2846%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2847%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2848%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2849%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%285%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2850%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2851%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2852%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2853%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2854%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2855%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2856%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2857%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2858%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2859%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%286%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%2860%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%287%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%288%29.jpg" />
+    <Content Include="Content\images\Teslimatlar\Teslimat%289%29.jpg" />
+    <Content Include="Content\images\vh100.jpg" />
+    <Content Include="Content\images\vh130.jpg" />
+    <Content Include="Content\images\vh160.jpg" />
+    <Content Include="Content\images\vizyon.png" />
+    <Content Include="Content\js\bootstrap-datepicker.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\google-map.js" />
+    <Content Include="Content\js\jquery-3.2.1.min.js" />
+    <Content Include="Content\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="Content\js\jquery.animateNumber.min.js" />
+    <Content Include="Content\js\jquery.easing.1.3.js" />
+    <Content Include="Content\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.stellar.min.js" />
+    <Content Include="Content\js\jquery.timepicker.min.js" />
+    <Content Include="Content\js\jquery.waypoints.min.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\owl.carousel.min.js" />
+    <Content Include="Content\js\popper.min.js" />
+    <Content Include="Content\js\scrollax.min.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\css\.DS_Store" />
+    <Content Include="Content\css\bootstrap\.DS_Store" />
+    <Content Include="Content\css\css\.DS_Store" />
+    <Content Include="Content\fonts\.DS_Store" />
+    <Content Include="Content\fonts\flaticon\.DS_Store" />
+    <Content Include="Content\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="Content\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="Content\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="Content\fonts\flaticon\font\Flaticon.woff2" />
+    <Content Include="Content\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="Content\fonts\flaticon\license\license.pdf" />
+    <Content Include="Content\js\.DS_Store" />
+    <Content Include="Content\scss\.DS_Store" />
+    <Content Include="Content\scss\bootstrap\.DS_Store" />
+    <Content Include="Content\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Content\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Content\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Content\scss\bootstrap\_alert.scss" />
+    <Content Include="Content\scss\bootstrap\_badge.scss" />
+    <Content Include="Content\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Content\scss\bootstrap\_button-group.scss" />
+    <Content Include="Content\scss\bootstrap\_buttons.scss" />
+    <Content Include="Content\scss\bootstrap\_card.scss" />
+    <Content Include="Content\scss\bootstrap\_carousel.scss" />
+    <Content Include="Content\scss\bootstrap\_close.scss" />
+    <Content Include="Content\scss\bootstrap\_code.scss" />
+    <Content Include="Content\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Content\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Content\scss\bootstrap\_forms.scss" />
+    <Content Include="Content\scss\bootstrap\_functions.scss" />
+    <Content Include="Content\scss\bootstrap\_grid.scss" />
+    <Content Include="Content\scss\bootstrap\_images.scss" />
+    <Content Include="Content\scss\bootstrap\_input-group.scss" />
+    <Content Include="Content\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Content\scss\bootstrap\_list-group.scss" />
+    <Content Include="Content\scss\bootstrap\_media.scss" />
+    <Content Include="Content\scss\bootstrap\_mixins.scss" />
+    <Content Include="Content\scss\bootstrap\_modal.scss" />
+    <Content Include="Content\scss\bootstrap\_nav.scss" />
+    <Content Include="Content\scss\bootstrap\_navbar.scss" />
+    <Content Include="Content\scss\bootstrap\_pagination.scss" />
+    <Content Include="Content\scss\bootstrap\_popover.scss" />
+    <Content Include="Content\scss\bootstrap\_print.scss" />
+    <Content Include="Content\scss\bootstrap\_progress.scss" />
+    <Content Include="Content\scss\bootstrap\_reboot.scss" />
+    <Content Include="Content\scss\bootstrap\_root.scss" />
+    <Content Include="Content\scss\bootstrap\_spinners.scss" />
+    <Content Include="Content\scss\bootstrap\_tables.scss" />
+    <Content Include="Content\scss\bootstrap\_toasts.scss" />
+    <Content Include="Content\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Content\scss\bootstrap\_transitions.scss" />
+    <Content Include="Content\scss\bootstrap\_type.scss" />
+    <Content Include="Content\scss\bootstrap\_utilities.scss" />
+    <Content Include="Content\scss\bootstrap\_variables.scss" />
+    <Content Include="Content\scss\style.scss" />
+    <Content Include="Content\images\.DS_Store" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Data\HrpData.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Images.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AksesuarModel.cs" />
+    <Compile Include="Models\AydinlatmaModel.cs" />
+    <Compile Include="Models\BahceModel.cs" />
+    <Compile Include="Models\icMekanMobilya.cs" />
+    <Compile Include="Models\KentModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\GardenProducts.cshtml" />
+    <Content Include="Views\Home\GardenDetails.cshtml" />
+    <Content Include="Views\Home\IndoorProducts.cshtml" />
+    <Content Include="Views\Home\IndoorDetails.cshtml" />
+    <Content Include="Views\Home\Accessories.cshtml" />
+    <Content Include="Views\Home\AccessorieDetails.cshtml" />
+    <Content Include="Views\Home\LightingProducts.cshtml" />
+    <Content Include="Views\Home\LightingDetails.cshtml" />
+    <Content Include="Views\Home\CityProducts.cshtml" />
+    <Content Include="Views\Home\CityDetails.cshtml" />
+    <Content Include="Views\Home\ComplementaryProducts.cshtml" />
+    <Content Include="Views\Home\WoodType.cshtml" />
+    <Content Include="Views\Home\FabricsOptions.cshtml" />
+    <Content Include="Views\Home\LeatherOptions.cshtml" />
+    <Content Include="Views\Home\MetalColor.cshtml" />
+    <Content Include="Views\Home\Galeri.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57040</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44380/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

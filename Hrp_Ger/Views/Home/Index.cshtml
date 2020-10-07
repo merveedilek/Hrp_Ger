@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+@section Index{
+    @Html.Raw("activee")
+}
+<!-- Slideshow container -->
+    <div class="slideshow-container" >
+
+        <!-- Full-width images with number and caption text -->
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img class="foto"  src="~/Content/HRP/anaresimler/bm-ob-01-r.jpg" style="width:100%; object-fit:cover">
+            <div class="texts">GARTENMÖBEL</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img class="foto"  src="~/Content/HRP/anaresimler/Adsız.jpg" style="width:100%;object-fit:cover">
+            <div class="texts">INNENMÖBEL</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img class="foto" src="~/Content/HRP/anaresimler/ayna-002-r.jpg" style="width:100%; object-fit:cover">
+            <div class="texts">ZUBEHÖR</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img class="foto" src="~/Content/HRP/anaresimler/au-001-r.jpg" style="width:100%; object-fit:cover">
+            <div class="texts">BELEUCHTUGNS PRODUKTE</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img class="foto" src="~/Content/HRP/anaresimler/kentmobilya.jpg" style="width:100%; object-fit:cover">
+            <div class="texts">STADTMÖBEL</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" style="right:0px" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-4 ftco-animate">
+        <div class="work mb-4 img d-flex align-items-end" style="background-image: url('../../Content/HRP/anaresimler/1-min.jpg');">
+            <a href="@Url.Action("GardenProducts","Home")" class="icon  d-flex justify-content-center align-items-center">
+                <span class="">Blättern</span>
+            </a>
+            <div class="desc w-100 ">
+                <div class="text w-100 mb-3">
+                    <h5 style="text-align:center" >Gartenmöbel</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 ftco-animate">
+        <div class="work mb-4 img d-flex align-items-end" style="background-image: url('../../Content/HRP/anaresimler/icMekanMobilya.jpg');">
+            <a href="@Url.Action("IndoorProducts","Home")" class="icon  d-flex justify-content-center align-items-center">
+                <span class="">Blättern</span>
+            </a>
+            <div class="desc w-100 ">
+                <div class="text w-100 mb-3">
+                    <h5 style="text-align:center">Innenmöbel</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 ftco-animate">
+        <div class="work mb-4 img d-flex align-items-end" style="        background-image: url('../../Content/HRP/anaresimler/aksesuarlar1.jpg');">
+            <a href="@Url.Action("Accessories","Home")" class="icon  d-flex justify-content-center align-items-center">
+                <span class="">Blättern</span>
+            </a>
+            <div class="desc w-100 ">
+                <div class="text w-100 mb-3">
+                    <h5 style="text-align:center">Zubehör</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 ftco-animate">
+        <div class="work mb-4 img d-flex align-items-end" style="background-image: url('../../Content/HRP/anaresimler/aydınlatmaUrunler.jpg');">
+            <a href="@Url.Action("LightingProducts","Home")" class="icon  d-flex justify-content-center align-items-center">
+                <span class="">Blättern</span>
+            </a>
+            <div class="desc w-100 ">
+                <div class="text w-100 mb-3">
+                    <h5 style="text-align:center">Beleuchtugns Produkte</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 ftco-animate">
+        <div class="work mb-4 img d-flex align-items-end" style="background-image: url('../../Content/HRP/anaresimler/kentmobilya.jpg');">
+            <a href="@Url.Action("CityProducts","Home")" class="icon  d-flex justify-content-center align-items-center">
+                <span class="">Blättern</span>
+            </a>
+            <div class="desc w-100 ">
+                <div class="text w-100 mb-3">
+                    <h5 style="text-align:center">Stadtmöbel</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 ftco-animate">
+        <div class="work mb-4 img d-flex align-items-end" style="background-image: url('../../Content/HRP/anaresimler/tamamlayiciurun1.jpg');">
+            <a href="@Url.Action("ComplementaryProducts","Home")" class="icon  d-flex justify-content-center align-items-center">
+                <span class="">Blättern</span>
+            </a>
+            <div class="desc w-100 ">
+                <div class="text w-100 mb-3">
+                    <h5 style="text-align:center">Erganzende Produkte</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

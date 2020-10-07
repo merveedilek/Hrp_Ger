@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+
+@section Contact{
+    @Html.Raw("activee")
+}
+<section class="hero-wrap hero-wrap-2" style="background-image: url('../../Content/HRP/bize-ulasin-banner.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end">
+            <div class="col-md-9 ftco-animate pb-5">
+                <h1 class="mb-0 bread">Kontakt</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-md-7 d-flex">
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                <h3 class="mb-4">Kontakt Form</h3>
+                                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @id = "contact-form" }))
+                                {
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="Ad" id="name" placeholder="Vorname">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="Mail" id="email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="Konu" id="subject" placeholder="Betreff der Nachricht">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="Mesaj" class="form-control" id="message" cols="30" rows="7" placeholder="Botschaft"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Send" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex align-items-stretch">
+                            <div class="info-wrap bg-primary w-100 p-lg-5 p-4">
+                                <h3 class="mb-4 mt-md-4">Kontakt informationen</h3>
+                                <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-map-marker"></span>
+                                    </div>
+                                    <div class="text pl-3">
+                                        <p>
+                                            <span>Adres:</span> <br /> Metal Mühendislik Makine Sanayi ve Tic.Ltd.Şti.
+                                            Karaağaç Mah. Hadımköy İstanbul Cad. No:5 Büyükçekmece / İstanbul
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-phone"></span>
+                                    </div>
+                                    <div class="text pl-3">
+                                        <p><span>Telefon:</span> <br /> <a href="callto:+90 (212) 871 22 77">+90 (212) 871 22 77</a></p>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text pl-3">
+                                        <p><span>Email:</span> <a href="malilto:info@metalmuhendislik.com.tr"> info@metalmuhendislik.com.tr</a> </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div id="map" class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3007.17641308037!2d28.6267953!3d41.086992!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b558ff01392f99%3A0x73fb7dfee59ca0f5!2sMetal%20M%C3%BChendislik!5e0!3m2!1sde!2str!4v1585685475289!5m2!1sde!2str" width="100%" height="450" frameborder="0" class="harita" style="border:0; margin-top:10px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

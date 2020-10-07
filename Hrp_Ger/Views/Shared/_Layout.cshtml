@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/Content/css/animate.css">
+    <link rel="stylesheet" href="~/Content/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Content/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/Content/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="~/Content/css/flaticon.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link href="~/Content/css/css/dropdown.css" rel="stylesheet" />
+    @*<style>
+        body {
+            background-image: url(/Content/HRP/blue-snow.png);
+            background-repeat: repeat;
+            background-size: auto;
+        }
+    </style>*@
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-3 d-flex align-items-center">
+                    <a class="navbar-brand" href="@Url.Action("index","Home")">
+                        <img class="mobilLogo" src="~/Content/HRP/hrp-logo.png" style=" width:100%; margin-top:-20px"  />
+                    </a>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col">
+                            <div class="top-wrap d-flex">
+                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-location-arrow"></span></div>
+                                <div class="text"><span style="color:black">Email</span><span style="color:black">info@metalmuhendislik.com.tr</span></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="top-wrap d-flex">
+                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-location-arrow"></span></div>
+                                <div class="text"><span style="color:black">Telefon</span><span style="color:black">+90 (212) 871 22 77</span></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-end align-items-center">
+                            <div class="social-media">
+                                <p class="mb-0 d-flex">
+                                    <a href="https://www.facebook.com/FurnitureHRP/" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                                    <a href="https://twitter.com/hrpfurniture" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                                    <a href="https://www.instagram.com/hrpfurniture/" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                                  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item @RenderSection("Index",false)"><a class="nav-link" href="@Url.Action("Index","Home")">HOME</a></li>
+
+                    <li class="nav-item @RenderSection("About",false)"><a class="nav-link" href="@Url.Action("About","Home")">ÜBER UNS</a></li>
+                    <li class="nav-item @RenderSection("Produkte",false)">
+                        <div class="dropdown">
+                            <button onclick="myFunction()" style="cursor:pointer" class="dropbtn">UNSERE PRODUKTE </button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="@Url.Action("GardenProducts","Home")">Gartenmöbel</a>
+                                <a href="@Url.Action("IndoorProducts","Home")">Innenmöbel</a>
+                                <a href="@Url.Action("Accessories","Home")">Zubehör</a>
+                                <a href="@Url.Action("LightingProducts","Home")">Beleuchtugns Produkte</a>
+                                <a href="@Url.Action("CityProducts","Home")">Stadtmöbel</a>
+                                <a href="@Url.Action("ComplementaryProducts","Home")">Erganzende Produkte</a>
+
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item @RenderSection("Galeri",false)"><a class="nav-link" href="@Url.Action("Galeri","Home")">BILDERGALERIE</a></li>
+                  
+                    <li class="nav-item @RenderSection("Contact",false)"><a class="nav-link" href="@Url.Action("Contact","Home")">KONTAKT</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+
+
+    </div>
+
+    <footer class="footer ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="logo">
+                            <a href="#">
+                                <img src="~/Content/HRP/hrp-logo.png" style="width:95%" />
+                            </a>
+                        </h2>
+                        <p>Sie können auf die Seite über uns gehen, um uns kennenzulernen. <br />   <a href="@Url.Action("About","Home")">Über uns</a></p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
+                            <li class="ftco-animate"><a href="https://twitter.com/hrpfurniture"><span class="fa fa-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/FurnitureHRP/"><span class="fa fa-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/hrpfurniture/"><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">MENU</h2>
+                        <ul class="list-unstyled">
+
+                            <li><a href="@Url.Action("GardenProduct","Home")"><span class="fa fa-check mr-3" style="color:#15447a"></span>Gartenmöbel</a></li>
+                            <li><a href="@Url.Action("IndoorProducts","Home")"><span class="fa fa-check mr-3"style="color:#15447a"></span>Innenmöbel</a></li>
+                            <li><a href="@Url.Action("Accessories","Home")"><span class="fa fa-check mr-3" style="color:#15447a"></span>Zubehör</a></li>
+                            <li><a href="@Url.Action("LightingProducts","Home")"><span class="fa fa-check mr-3" style="color:#15447a" ></span>Beleuchtugns Produkte</a></li>
+                            <li><a href="@Url.Action("CityProducts","Home")"><span class="fa fa-check mr-3" style="color:#15447a"></span>Stadtmöbel</a></li>
+                            <li><a href="@Url.Action("ComplementaryProducts","Home")"><span class="fa fa-check mr-3" style="color:#15447a"></span>Erganzende Produkte</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Kontakt informationen</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li>
+                                    <span class="icon fa fa-map-marker" style="color:#15447a"></span><span class="text">
+    Metal Mühendislik Makine Sanayi ve Tic.Ltd.Şti.
+    Karaağaç Mah. Hadımköy İstanbul Cad. No:5 Büyükçekmece / İstanbul
+</span>
+                                </li>
+                                <li><a href="callto:+90(212) 871 22 77"><span class="icon fa fa-phone"></span><span class="text">+90(212) 871 22 77</span></a></li>
+                                <li><a href="malilto:info@articnc.com.tr"><span class="icon fa fa-paper-plane"></span><span class="text">info@metalmuhendislik.com.tr</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Copyright &copy;
+                        HRP
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+    <script src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Content/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/Content/js/popper.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/jquery.easing.1.3.js"></script>
+    <script src="~/Content/js/jquery.waypoints.min.js"></script>
+    <script src="~/Content/js/jquery.stellar.min.js"></script>
+    <script src="~/Content/js/jquery.animateNumber.min.js"></script>
+    <script src="~/Content/js/bootstrap-datepicker.js"></script>
+    <script src="~/Content/js/jquery.timepicker.min.js"></script>
+    <script src="~/Content/js/owl.carousel.min.js"></script>
+    <script src="~/Content/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/js/scrollax.min.js"></script>
+    <script src="~/Content/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="~/Content/js/google-map.js"></script>
+    <script src="~/Content/js/main.js"></script>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+</html>
